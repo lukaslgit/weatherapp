@@ -141,7 +141,8 @@ const imgBackground = (imgData.hits && imgData.hits.length > 0) ? imgData.hits[0
 
                 setWeatherNow(prev => 
                     ({...prev,
-                        name: data[0].local_names?.en ? data[0].local_names.en : data[0].state ? data[0].name + ' - ' + data[0].state : data[0].name, 
+                        name: data[0].local_names?.en ? data[0].local_names.en : data[0].state ? data[0].name + ' - ' + data[0].state : data[0].name,
+                        shortname: data[0].name,
                         country: weatherData.sys.country,
                         temp: weatherData.main.temp.toFixed(0),
                         tempFeels: weatherData.main.feels_like.toFixed(0), 
@@ -435,7 +436,7 @@ function showTemp(celsius){
                                 </div>
                                 <div className="weatherInfoExtraDesc">
                                     <p>Location</p>
-                                    <h1>{weatherNow.name}</h1>
+                                    <h1>{weatherNow.shortname}</h1>
                                 </div>
                             </div>
                             <div>
