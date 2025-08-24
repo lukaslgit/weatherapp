@@ -118,6 +118,10 @@ body {
     transition: 500ms;
 }
 
+.darkmodBtn, #switchBtn {
+    color: black;
+}
+
 #nav {
     width: 100%;
 }
