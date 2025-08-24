@@ -1,0 +1,627 @@
+#root {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: rgb(221, 240, 255);
+    transition: 250ms;
+    min-height: 100%;
+}
+
+.darkmode {
+    background-color: black;
+    transition: 250ms;
+}
+
+.darkmode #nav > div {
+    background-color: rgb(31, 31, 31);;
+}
+
+.darkmode .currentCity p,
+.darkmode .currentCity svg {
+    color: white;
+}
+
+.darkmode #nav input {
+    border: 2px solid black;
+    background-color: rgb(99, 99, 99);
+    background-clip: border-box;
+    color: white;
+}
+
+.darkmode #searchBtn {
+    background-color: black;
+    color: white;
+}
+
+.darkmode #nav input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px rgb(99, 99, 99) inset !important;
+    -webkit-text-fill-color: white !important;
+}
+
+.darkmode #rightSide {
+    background-color: rgb(31, 31, 31);
+    transition: 250ms;
+}
+
+.darkmode #rightSide p,
+.darkmode #rightSide button {
+    color: white;
+}
+
+.darkmode #rightSide > nav > button.active {
+    border-bottom: 2px solid white;
+}
+
+.darkmode .weatherInfoExtra div {
+    background-color: rgb(31, 31, 31);
+    color: white;
+}
+
+.darkmode .darkmodBtn {
+    background-color: black;
+    color: white;
+}
+
+.darkmode #switchBtn {
+    background-color: black;
+    color: white;
+}
+
+.darkmode .text-type span {
+    color: white;
+}
+
+.darkmode footer {
+    background-color: rgb(31, 31, 31);
+    color: white;
+}
+
+.text-type span {
+  display: inline-block;
+  white-space: pre-wrap;
+  font-family: 'Inter', sans-serif;
+  padding-left: 3px;
+}
+
+.text-type__cursor {
+  margin-left: 0.25rem;
+  display: inline-block;
+  opacity: 1;
+}
+
+.text-type__cursor--hidden {
+  display: none;
+}
+
+.darkmodBtn {
+    background-color: rgb(220, 239, 255);;
+    border-radius: 100%;
+    border: none;
+    font-size: 20px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 800;
+    height: 50px;
+    width: 50px;
+}
+
+.darkmodBtn:hover svg {
+    font-size: 22px;
+    transition: 500ms;
+}
+
+#nav {
+    width: 100%;
+}
+
+#nav > div {
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    border-radius: 20px;
+    width: 90%;
+    margin: auto;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    margin-bottom: 40px;
+    margin-top: 20px;
+}
+
+.navLeft {
+    display: flex;
+    gap: 20px;
+}
+
+.navLeft div {
+    display: flex;
+    align-items: center;
+}
+
+#nav input,
+#searchBtn {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    font-family: inherit;
+    font-size: inherit;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#nav input {
+    border: 2px solid rgb(220, 239, 255);
+    border-radius: 8px 0 0 8px;
+    width: 400px;
+    padding-left: 10px;
+    font-weight: 400;
+}
+
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px white inset;
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+#nav input::placeholder {
+    color: rgb(158, 158, 158);
+    font-weight: 300;
+}
+
+input:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+#nav button:focus {
+    outline: none;
+}
+
+#searchBtn {
+    background-color: rgb(220, 239, 255);
+    border: none;
+    width: 40px;
+    border-radius: 0 8px 8px 0;
+}
+
+#nav button:hover {
+    cursor: pointer;
+}
+
+#nav div.currentCity{
+    font-weight: 300;
+    gap: 3px;
+    min-width: 280px;
+}
+
+.currentCity {
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    gap: 8px;
+}
+
+.currentCity a {
+    font-weight: 800;
+}
+
+.currentCity div {
+    display: flex;
+}
+
+.navRight {
+    display: flex;
+    align-items: center;
+    padding-right: 20px;
+    gap: 15px;
+}
+
+#switchBtn {
+    border: none;
+    background-color: rgb(220, 239, 255);
+    border-radius: 100%;
+    font-size: 20px;
+    height: 50px;
+    width: 50px;
+    font-weight: 800;
+    font-family: 'Inter', sans-serif;
+}
+
+#switchBtn:hover {
+    font-size: 22px;
+    transition: 500ms;
+}
+
+#weatherInfoNow {
+    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://idsb.tmgrup.com.tr/ly/uploads/images/2024/03/18/319978.jpg');
+    border-radius: 20px;
+    padding: 20px;
+    background-position: center;
+    background-size: cover;
+    color: white;
+    height: 300px;
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.04), 0 1px 3px rgba(0, 0, 0, 0.02);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+
+#weatherLeft {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    height: 80px;
+    font-size: 26px;
+    font-weight: 800;
+}
+
+#weatherLeft > img {
+    width: 80px;
+    height: 80px;
+}
+
+#weatherLeft > div > p {
+    margin: 0;
+}
+
+.time {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+#weatherRight {
+    display: flex;
+    align-items: center;
+    height: 80px;
+    gap: 3px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+#weatherRight > i{
+    font-size: 20px;
+}
+
+
+
+
+
+/*  GRAPH (not used yet)
+
+#graph {
+    width: 500px;
+    height: 300px;
+    background-color: rgb(37, 37, 37);
+    border-radius: 20px;
+    padding: 20px;
+}
+
+*/
+
+ul {
+    margin: auto;
+    padding: 0;
+    padding-top: 30px;
+}
+
+li img {
+    width: 50px;
+}
+
+li {
+    list-style: none;
+}
+
+li:not(:last-child){
+    border-bottom: 2px solid rgb(205, 234, 255);
+}
+
+.forecastLi {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.forecastLi section {
+    /**min-width: 33%; */
+    align-items: center;
+}
+
+.dayinfo {
+    gap: 15px;
+    align-items: center;
+    display: flex;
+    width: 40%;
+}
+
+.dayinfodesc p {
+    margin: 0;
+}
+
+.dayinfodesctime {
+    font-weight: 800;
+    font-size: 20px;
+}
+
+.dayinfotemp {
+    display: flex;
+    justify-content: center;
+    width: 30%;
+}
+
+.dayinfotemp p{
+    width: 100%;
+    text-align: center;
+    font-size: 26px;
+    font-weight: 800;
+    border-left: 2px solid rgb(205, 234, 255);
+}
+
+.dayinfowind {
+    display: flex;
+    justify-content: end;
+    width: 30%;
+}
+
+.dayinfowind div p {
+    margin: 0;
+    min-width: 120px;
+}
+
+#noborder {
+    border: none;
+    font-weight: 500;
+}
+
+#rightSide {
+    background-color: white;
+    width: 40%;
+    border-radius: 20px;
+    padding: 20px;
+    height: fit-content;
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.04), 0 1px 3px rgba(0, 0, 0, 0.02);
+    transition: 250ms;
+}
+
+#rightSide nav {
+    padding-bottom: 15px;
+}
+
+#leftSide {
+    width: 55%;
+}
+
+#rightSide > nav > button {
+    margin-right: 10px;
+    border: none;
+    background-color: transparent;
+    font-family: 'Inter', sans-serif;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+#rightSide > nav > button.active {
+    border-bottom: 2px solid black;
+}
+
+#rightSide > nav > button:active {
+    border: none;
+    border-bottom: 2px solid black;
+}
+
+#mainSection {
+    display: flex;
+    width: 90%;
+    justify-content: space-between;
+    margin: auto;
+    min-height: 800px;
+}
+
+.weatherInfoExtra {
+    display: flexbox;
+    width: 100%;
+    padding-top: 40px;
+    margin: auto;
+}
+
+.weatherInfoExtraUp {
+    display: flex;
+    justify-content: space-between;
+}
+
+.weatherInfoExtraDown {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 50px;
+}
+
+.weatherInfoExtra > section > div {
+    width: 25%;
+    height: 80px;
+    background-color: white;
+    border-radius: 20px;
+    display: flex;
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.04), 0 1px 3px rgba(0, 0, 0, 0.02);
+    padding: 20px;
+}
+
+.weatherInfoExtraIcon {
+    width: 20%;
+}
+
+.weatherInfoExtraDesc {
+    width: 80%;
+}
+
+.weatherInfoExtraDesc p {
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.weatherInfoExtraDesc h1{
+    margin: 0;
+}
+
+.weatherInfoExtraDesc h1 {
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.weatherInfoExtraDesc a {
+    font-weight: 600;
+}
+
+main {
+    flex: 1;
+}
+
+footer {
+    width: 90%;
+    margin: auto;
+    background-color: white;
+    border-radius: 20px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+footer div {
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+footer a {
+    font-weight: 800;
+    font-size: 20px;
+}
+
+.loader {
+    width: 100px;
+    height: 100px;
+    border: 7px solid;
+    border-color: white transparent white transparent;
+    margin: 100px auto;
+    border-radius: 50%;
+    animation: loadspinner 1s ease infinite;
+}
+
+
+@keyframes loadspinner {
+    
+    from {
+        transform: rotate(0deg);
+    }
+    
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@media only screen and (max-width: 1300px) {
+
+    #mainSection {
+        display: block;
+    }
+
+    #leftSide {
+    width: 90%;
+    margin: auto;
+    }
+
+    #rightSide {
+        width: 90%;
+        margin: 40px auto;
+        padding: 0;
+    }
+
+    #rightSide > nav {
+        padding: 15px;
+    }
+
+    #nav > div {
+        width: 80%;
+    }
+
+    footer {
+        width: 80%;
+        margin-top: 0;
+    }
+
+    
+}
+
+@media only screen and (max-width: 1150px) {
+    .navRight {
+        display: none;
+    }
+
+    .currentCity {
+        display: none !important;
+    }
+
+    .navLeft {
+        margin: auto;
+    }
+
+    #nav > div {
+        width: 80%;
+        margin: auto;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    #nav input {
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+}
+
+
+@media only screen and (max-width: 700px) {
+
+    .dayinfowind {
+        display: none;
+    }
+
+    .weatherInfoExtraUp > div:last-child,
+    .weatherInfoExtraDown > div:last-child{
+        display: none;
+    }
+
+    .weatherInfoExtra > section > div,
+    .weatherInfoExtraDown > section > div {
+        width: 35%;
+    }
+
+    .weatherInfoExtra h1 {
+        font-size: 20px;
+    }
+
+    .weatherInfoExtra a {
+        display: none;
+    }
+
+    #weatherRight {
+        display: none;
+    }
+
+    #weatherInfoNow {
+        height: 250px;
+    }
+
+    #nav input {
+        width: 100%;
+    }
+
+}
