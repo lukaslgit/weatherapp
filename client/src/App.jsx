@@ -15,8 +15,6 @@ export default function App(){
 
     const API_ROUTE = import.meta.env.VITE_API_URL;
 
-    console.log(API_ROUTE)
-
     const [inputCity, setInputCity] = useState('')
     const [weatherNow, setWeatherNow] = useState({name: null, country: null, temp: null, tempFeels: null, windSpeed: null, windDegree: null, weatherId: null, time: null, timezone: null, imgUrl: null, humidity: null, visibility: null, pressure: null})
     const [weatherForecast, setWeatherForecast] = useState([{temp: null, hour: null, timezone: null, windSpeed: null, desc: null, humidity: null, weatherId: null}])
@@ -520,6 +518,7 @@ function showTemp(celsius){
                 <p><a>Weather App</a></p>
                 <p>Lukas Lutonsky</p>
                 <p>lukas@lutonsky.eu</p>
+                <p><a target="_blank" rel="noopener noreferrer" href="https://github.com/lukaslgit/weatherapp">GitHub Link</a></p>
             </div>
         </footer>
 

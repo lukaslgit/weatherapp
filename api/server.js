@@ -4,9 +4,11 @@ const axios = require('axios');
 
 require('dotenv').config()
 
+const PORT = process.env.PORT;
+
 const cors = require('cors');
 const corsOptions = {
-    origin: ['http://185.223.30.29:3000']
+    origin: [`${process.env.DOMAIN}`]
 }
 
 app.use(cors(corsOptions))
@@ -71,6 +73,6 @@ app.get('/api/bgimg', async (req, res) => {
 
 });
 
-app.listen(8000, () => {
-    console.log('Server started on PORT 8000')
+app.listen(PORT, () => {
+    console.log(`Server started on PORT ${PORT}`)
 })
