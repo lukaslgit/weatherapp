@@ -514,12 +514,19 @@ function showTemp(celsius){
 
 
         <footer>
-            <div>
-                <p><a>Weather App</a></p>
-                <p>Lukas Lutonsky</p>
-                <p>lukas@lutonsky.eu</p>
-                <p><a target="_blank" rel="noopener noreferrer" href="https://github.com/lukaslgit/weatherapp">GitHub Link</a></p>
-            </div>
+            <section>
+                <div>
+                    <p><a>Weather App</a></p>
+                    <p>Lukas Lutonsky</p>
+                    <p>lukas@lutonsky.eu</p>
+                    <p><a className="ghlink" target="_blank" rel="noopener noreferrer" href="https://github.com/lukaslgit/weatherapp">GitHub Link</a></p>
+                </div>
+
+                <div className="btnsFooter">
+                        <button id="switchBtn" onClick={() => setToFahrenheit(!toFahrenheit)}>{!toFahrenheit ? '°C' : '°F'}</button>
+                        <button className="darkmodBtn" onClick={() => setDarkmode(!darkmode)}>{darkmode ? <FontAwesomeIcon icon={faMoon} /> : <FontAwesomeIcon icon={faSun} />}</button>
+                </div>
+            </section>
         </footer>
 
     </>)

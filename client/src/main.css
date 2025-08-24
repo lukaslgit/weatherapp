@@ -81,6 +81,10 @@ body {
     color: white;
 }
 
+.darkmode .ghlink {
+    color: rgb(182, 182, 255);
+}
+
 .text-type span {
   display: inline-block;
   white-space: pre-wrap;
@@ -409,6 +413,7 @@ li:not(:last-child){
     font-family: 'Inter', sans-serif;
     font-size: 16px;
     font-weight: 600;
+    color: black;
 }
 
 #rightSide > nav > button.active {
@@ -497,14 +502,23 @@ footer {
 
 footer div {
     text-align: center;
-    padding-top: 10px;
-    padding-bottom: 10px;
 }
 
 footer a {
     font-weight: 800;
     font-size: 20px;
     text-decoration: none;
+}
+
+footer section {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.btnsFooter {
+    display: none;
+    justify-content: center;
+    gap: 15px;
 }
 
 .loader {
@@ -586,6 +600,10 @@ footer a {
         padding-right: 20px;
         padding-left: 20px;
     }
+
+    .btnsFooter {
+    display: flex;
+}
 }
 
 
@@ -623,6 +641,10 @@ footer a {
 
     #nav input {
         width: 100%;
+    }
+
+    #noborder {
+        display: none;
     }
 
 }
