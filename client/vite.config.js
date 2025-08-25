@@ -6,6 +6,7 @@ dotenv.config()
 
 // https://vite.dev/config/
 export default defineConfig({
+  base: '/weatherapp/',
   server: {
     host: true,
     port: process.env.PORT  

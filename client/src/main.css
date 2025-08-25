@@ -297,22 +297,6 @@ input:focus {
     font-size: 20px;
 }
 
-
-
-
-
-/*  GRAPH (not used yet)
-
-#graph {
-    width: 500px;
-    height: 300px;
-    background-color: rgb(37, 37, 37);
-    border-radius: 20px;
-    padding: 20px;
-}
-
-*/
-
 ul {
     margin: auto;
     padding: 0;
