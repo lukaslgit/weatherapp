@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import WeatherGraph from "./WeatherGraph";
 import axios from 'axios';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMagnifyingGlass, faArrowUp, faWind, faLocationDot, faDroplet, faEye, faTemperatureFull, faGauge, faSun, faMoon } from '@fortawesome/free-solid-svg-icons';
